@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+body {
+  background-color: #FBF5F3; /* Soft Peach */
+  color: #4A403A; /* Warm Dark Grey */
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #A67B5B; /* Subtle Earthy Brown */
+  color: #FBF5F3; /* Soft Peach */
+  padding: 1em 0;
+  text-align: center;
+}
+
+footer {
+  background-color: #A67B5B; /* Subtle Earthy Brown */
+  color: #FBF5F3; /* Soft Peach */
+  padding: .001em 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 1.5em;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #FBF5F3; /* Soft Peach */
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #FFF;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 15px;
+  padding: 15px;
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border: 3px solid #E8DFD8; /* Light Grey Border */
+  border-radius: 5px;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+section {
+  padding: 1em;
+  background-color: transparent;
+}
+
+h1, h2 {
+  color: #4A403A; /* Warm Dark Grey */
+  margin: 0;
+  padding-top: 0.5em;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+/* Services Section */
+#services-preview,
+#contact,
+#instagram-portfolio,
+#portfolio-preview,
+#showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Service List Styles */
+#services-preview ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#services-preview li {
+  background-color: #E8DFD8; /* Light Grey */
+  color: #4A403A; /* Warm Dark Grey */
+  padding: 0.8em;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  text-align: center;
+  width: 130%;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+#services-preview h2 {
+  padding-bottom: 1em;
+}
+
+#services-preview p {
+  padding-top: 1em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Contact Form Styles */
+#contact form {
+  background-color: #E8DFD8; /* Light Grey */
+  padding: 1em;
+  border-radius: 5px;
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#contact label,
+#contact input,
+#contact textarea,
+#contact button {
+  width: calc(100% - 2em);
+  margin-top: 0.5em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#contact button {
+  background-color: #A67B5B; /* Subtle Earthy Brown */
+  color: #FBF5F3; /* Soft Peach */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+#contact button:hover {
+  background-color: #8C6A4F; /* Darker Brown */
+  color: #FFF;
+}
+
+/* Instagram Portfolio */
+#instagram-portfolio {
+  width: 100%;
+  padding: .3em;
+}
+
+/*Music Button */
+.music-player-container {
+  text-align: center;
+  padding: 10px;
+}
+
+#play-music {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #A67B5B; /* Subtle Earthy Brown */
+  color: #4A403A; /* Soft Peach */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: .8em;
+  transition: background-color 0.3s ease;
+}
+
+#play-music:hover {
+  background-color: #8C6A4F; /* Darker Brown */
+  color: #FFF;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  nav ul li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  header,
+  section {
+    padding: 1em;
+  }
+}

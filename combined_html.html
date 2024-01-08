@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - I'll Shoot Your Family Photography</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app">
+  <header>
+    <h1>{{ title }}</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to book a session? Get in touch!</p>
+    <form @submit.prevent="submitForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" v-model="contact.name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" v-model="contact.email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" v-model="contact.message" required></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 I'll Shoot Your Family Photography. All rights reserved.</p>
+  </footer>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'll Shoot Your Family - Photography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  </head>
+
+<div id="app">
+  <header>
+    <h1>{{ title }}</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="music-player-container">
+      <button id="play-music" onclick="toggleMusic()">Pause Music</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="showcase">
+      <p>Capturing your moments and turning them into memories. Browse my portfolio to see some of my work.</p>
+    </section>
+
+    <!-- Portfolio Preview Section -->
+    <section id="portfolio-preview">
+      <h2>Portfolio Highlights</h2>
+      <div class="gallery">
+        <!-- Dynamically loaded images -->
+        <img v-for="image in filteredPortfolio" :src="image.src" :alt="image.alt">
+      </div>
+      <p><a href="portfolio.html">View Full Portfolio</a></p>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section id="services-preview">
+      <h2>Services Include:</h2>
+      <ul>
+        <li>Portrait Photography</li>
+        <li>Wedding Photography</li>
+        <li>Event Photography</li>
+        <li>Pet Photography</li>
+      </ul>
+      <p>Please contact me <a href="contact.html">here</a> so we can find the best package for you!</p>
+    </section>
+  </main>
+
+  <!-- Music Player -->
+<script>
+  function toggleMusic() {
+    var backgroundMusic = document.getElementById('background-music');
+    if (backgroundMusic.paused) {
+      backgroundMusic.play();
+    } else {
+      backgroundMusic.pause();
+    }
+  }
+</script>
+
+
+
+  <footer>
+    <p>&copy; 2023 I'll Shoot Your Family Photography. All rights reserved.</p>
+  </footer>
+</div>
+
+<script src="main.js"></script>
+<audio autoplay loop id="background-music" style="display:none;">
+  <source src="sounds/homepagesong.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I'll Shoot Your Family - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>I'll Shoot Your Family - Photography</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Portfolio Content -->
+  <main>
+    <section id="instagram-portfolio">
+      <!-- LightWidget WIDGET -->
+      <script src="https://cdn.lightwidget.com/widgets/lightwidget.js">
+      </script><iframe src="//lightwidget.com/widgets/588dab54aa9f521480d4d84755f6ef3f.html"
+      scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 I'll Shoot Your Family - Photography</p>
+  </footer>
+
+  <!-- Optionally, you can also link the main.js if you have common JavaScript for all pages -->
+  <script src="main.js"></script>
+</body>
+</html>
